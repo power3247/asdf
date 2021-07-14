@@ -10,7 +10,7 @@ def index(request):
     if path == '/home/':
         resultstr = '<h1>여긴 홈이다!?</h1>'
     else:
-        resultstr = '<h1>여긴 ㅁ잉메인이다?</h1>'
+        resultstr = '<h1>여긴 master이다?</h1>'
 
     return HttpResponse(resultstr)
 
@@ -18,6 +18,7 @@ def index(request):
 def index01(request):
     result = {'first': 'samuel jacksn', 'second': 'park'}
     return render(request, 'index.html', context=result)
+
 
 def index02(request):
     result = {'first': request.GET['first'], 'second': request.GET['second']}
